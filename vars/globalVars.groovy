@@ -1,3 +1,6 @@
 #!/usr/bin/env groovy
 
-def foo = bar
+def call() {
+  def foo = bar
+}
+
