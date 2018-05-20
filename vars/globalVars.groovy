@@ -1,6 +1,5 @@
 #!/usr/bin/env groovy
 
-def call() {
-  def foo = bar
+class GlobalVariables {
+   static String foo = "bar"
 }
-
