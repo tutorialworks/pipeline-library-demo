@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(String name = 'human') {
-  sh "printenv"
+  printCallStack()
   echo "Hello, ${name}."
 }
 
