@@ -5,7 +5,7 @@ import hudson.EnvVars
 import org.jenkinsci.plugins.pipeline.modeldefinition.Utils
 import java.util.UUID
 jenkins = Jenkins.instance
-def call(String giturl = 'https://github.com/ramjigit/pipeline-library-demo.git') {
+def call(String name = 'https://github.com/ramjigit/pipeline-library-demo.git') {
   echo "Hello, ${name}."
-   git ${giturl} pd
+   git ${name} pd
 }
