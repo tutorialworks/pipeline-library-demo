@@ -1,6 +1,4 @@
-
 #!/usr/bin/env groovy
-
 def call() {
 stage('Source co') {
     echo "Source code checkout"
