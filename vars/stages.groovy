@@ -20,6 +20,7 @@ stage('Vulnerability Scanning') {
 }
 stage('Artifactory Push') {
     echo "Artifactory Push"
+}    
 stage('Push to influxDB') {
     echo "Pushing to infuxdb"
     step([$class: 'InfluxDbPublisher',
