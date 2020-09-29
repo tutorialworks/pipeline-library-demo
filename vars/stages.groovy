@@ -34,7 +34,7 @@ customDataTags: null,
  jenkinsEnvParameterTag: '',
 measurementName: null,
  selectedTarget: 'TestDB',
- target: [$class: 'Target', database: 'rfdata', description: 'TestDB', exposeExceptions: true, globalListener: false, globalListenerFilter: '', jobScheduledTimeAsPointsTimestamp: true, password: <object of type hudson.util.Secret>, retentionPolicy: 'autogen', url: 'http://3.19.208.33:8086', username: 'admin', usingJenkinsProxy: true]])
+ target: [$class: 'Target', database: 'rfdata', description: 'TestDB', exposeExceptions: true, globalListener: false, globalListenerFilter: '', jobScheduledTimeAsPointsTimestamp: true, password: 'password12', retentionPolicy: 'autogen', url: 'http://3.19.208.33:8086', username: 'admin', usingJenkinsProxy: true]])
 }
 
 }
