@@ -1,11 +1,6 @@
 #!/usr/bin/env groovy
-import jenkins.model.*
-import hudson.slaves.EnvironmentVariablesNodeProperty
-import hudson.EnvVars
-import org.jenkinsci.plugins.pipeline.modeldefinition.Utils
-import java.util.UUID
-jenkins = Jenkins.instance
-def call(String name = 'https://github.com/ramjigit/pipeline-library-demo.git') {
-  echo "Hello, ${name}."
-   git ${name} pd
+
+def call()
+{
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'mygitid', url: 'https://github.com/ramjigit/pipeline-library-demo.git']]])
 }
