@@ -5,4 +5,6 @@ def call(val, x=10){
   for(i in 1..5){
     println i
   }
+def arg = ["Groovy","Java","Python",”nodeJS”]
+println arg.class
 }
