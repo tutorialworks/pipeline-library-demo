@@ -23,7 +23,7 @@ def call() {
      post {
             always {
                 
-                influxDbPublisher(selectedTarget: 'TestDB', customData: cstage)
+                influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
             }
         }
 
@@ -31,5 +31,10 @@ def call() {
         
       //pi ends here below      
        }
+       def assignURL(build_url) {
+       def buildURL = [:]
+       buildURL['url'] = build_url
+       return buildURL
+        }
       // call ends here
        }
