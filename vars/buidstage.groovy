@@ -17,8 +17,16 @@ def call() {
                 myFields['field_a'] = 11 
                 }
                 
+                    }
                        }
-                       }
+     post {
+            always {
+                influxDbPublisher(selectedTarget: 'TestDB', customData: myFields )
+            }
+        }
+    }
+
+ //stage ends here below                      
         
            }
        }
