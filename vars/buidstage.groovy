@@ -24,7 +24,6 @@ def call() {
                 influxDbPublisher(selectedTarget: 'TestDB', customData: myFields )
             }
         }
-    }
 
  //stage ends here below                      
         
