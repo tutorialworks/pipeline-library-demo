@@ -6,3 +6,4 @@ stage('Checkout') {
     def stagename='Checkout'
     echo "$stagename is completed"
 }
+}
