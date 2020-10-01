@@ -13,14 +13,14 @@ def call() {
             steps {
                 echo 'Building project...'
             }
-        }
         
+       }} 
         post {
             always {
                 influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
             }
         }
-    }
+    
 
 def assignURL(build_url) {
     def buildURL = [:]
