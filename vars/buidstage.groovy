@@ -19,15 +19,17 @@ def call() {
                 
                     }
                        }
+                     }
+     //stages ends here below                  
      post {
             always {
                 influxDbPublisher(selectedTarget: 'TestDB', customData: myFields )
             }
         }
 
- //stage ends here below                      
+                     
         
-           }
+      //pi ends here below      
        }
-
+      // call ends here
        }
