@@ -1,6 +1,6 @@
 // vars/Build.groovy
 def call() {
-     pipeline {
+ pipeline {
     
     agent any
 
@@ -10,23 +10,22 @@ def call() {
 
     stages {
         stage('Build') {
-            steps {
+                 steps {
                 echo 'Building project...'
-            }
-        
-       }
-
-       
-       post {
+                       }
+                       }
+        post {
             always {
                 influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
-		 def assignURL(build_url) {
-                def buildURL = [:]
-                buildURL['url'] = build_url
-               return buildURL
-                }
-            }
-        }
+		                }
+             }
+           }
        }
-       }
+
+
+    def assignURL(build_url) {
+    def buildURL = [:]
+    buildURL['url'] = build_url
+    return buildURL
+                             }
        }
