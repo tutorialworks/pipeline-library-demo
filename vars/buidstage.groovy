@@ -6,6 +6,8 @@ def call() {
 
     environment {
         BUILD_URL = "${BUILD_URL}"
+        cstage = "Buildstage"
+
     }
 
     stages {
@@ -21,7 +23,7 @@ def call() {
      post {
             always {
                 
-                influxDbPublisher(selectedTarget: 'TestDB', customData: 'BuildStage')
+                influxDbPublisher(selectedTarget: 'TestDB', customData: cstage)
             }
         }
 
