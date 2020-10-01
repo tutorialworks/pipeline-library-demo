@@ -16,16 +16,12 @@ def call() {
                        }
         post {
             always {
-                influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
+                def myFields = [:]
+                   myFields['field_a'] = 11
+                influxDbPublisher(selectedTarget: 'TestDB', customData: myFields)
 		                }
              }
            }
        }
 
-
-    def assignURL(build_url) {
-    def buildURL = [:]
-    buildURL['url'] = build_url
-    return buildURL
-                             }
        }
