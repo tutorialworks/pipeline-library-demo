@@ -8,6 +8,6 @@ stage('Checkout') {
     post {
             always {
                 influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
-            }
+            }}
 }
 }
