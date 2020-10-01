@@ -12,10 +12,7 @@ def call() {
         stage('Build') {
               steps {
                 echo 'Building project...'
-                script{
-                 def myFields = [:]
-                myFields['field_a'] = 11 
-                }
+                
                 
                     }
                        }
@@ -23,6 +20,10 @@ def call() {
      //stages ends here below                  
      post {
             always {
+                script{
+                 def myFields = [:]
+                myFields['field_a'] = 11 
+                }
                 influxDbPublisher(selectedTarget: 'TestDB', customData: myFields )
             }
         }
