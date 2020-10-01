@@ -5,6 +5,6 @@ stage('Checkout') {
     echo "Source code checkout"
     def stagename='Checkout'
     echo "$stagename is completed"
-    influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
+    influxDbPublisher(selectedTarget: 'TestDB', customData: $stagename)
 }
 }
