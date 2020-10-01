@@ -12,8 +12,11 @@ def call() {
         stage('Build') {
               steps {
                 echo 'Building project...'
-                def myFields = [:]
-                myFields['field_a'] = 11
+                script{
+                 def myFields = [:]
+                myFields['field_a'] = 11 
+                }
+                
                        }
                        }
         
