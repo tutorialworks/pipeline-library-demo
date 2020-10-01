@@ -27,7 +27,14 @@ def call() {
             }
         }
 
-                     
+        steps {
+          script{
+            def assignURL(build_url) {
+    def buildURL = [:]
+    buildURL['url'] = build_url
+    return buildURL}
+          }
+        }          
         
       //pi ends here below      
        }
