@@ -22,9 +22,9 @@ def call() {
             always {
                 script{
                  def myFields = [:]
-                myFields['field_a'] = 11 
+                     myFields['field_a'] = 11 
                 }
-                influxDbPublisher(selectedTarget: 'TestDB', customData: myFields )
+                influxDbPublisher(selectedTarget: 'TestDB', customData: myFields)
             }
         }
 
