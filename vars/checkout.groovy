@@ -1,10 +1,8 @@
 #!/usr/bin/env groovy
 
-def call(Map stageParams) {
- 
-    checkout([
-        $class: 'GitSCM',
-        branches: [[name:  stageParams.branch ]],
-        userRemoteConfigs: [[ url: stageParams.url ]]
-    ])
-  }
+def call() {
+stage('Checkout') {
+    echo "Source code checkout"
+    def stagename='Checkout'
+    echo "$stagename is completed"
+}
