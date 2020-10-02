@@ -1,6 +1,6 @@
-// vars/newpipe.groovy
+// vars/Build.groovy
 def call() {
-pipeline {
+ pipeline {
     options {
         disableConcurrentBuilds()
     }
@@ -39,5 +39,4 @@ def assignURL(build_url) {
     def buildURL = [:]
     buildURL['url'] = build_url
     return buildURL
-}
-}
+}}
