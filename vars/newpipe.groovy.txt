@@ -1,9 +1,7 @@
 #!/usr/bin/env groovy
 def call() {
- pipeline {
-    options {
-        disableConcurrentBuilds()
-    }
+pipeline {
+    
     
     agent any
 
@@ -30,9 +28,14 @@ def call() {
         }
         post {
             always {
-                influxDbPublisher customPrefix: '', customProjectName: 'TestDB', jenkinsEnvParameterField: 'KEY=\'testdata\'', jenkinsEnvParameterTag: '', selectedTarget: 'TestDB'
+                influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
             }
         }
     }
 
+def assignURL(build_url) {
+    def buildURL = [:]
+    buildURL['url'] = build_url
+    return buildURL
+}
 }
