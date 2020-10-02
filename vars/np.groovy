@@ -1,9 +1,6 @@
 #!/usr/bin/env groovy
 def call() {
  pipeline {
-    options {
-        disableConcurrentBuilds()
-    }
     
     agent any
 
