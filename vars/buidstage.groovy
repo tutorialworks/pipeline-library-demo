@@ -23,18 +23,11 @@ def call() {
      post {
             always {
                 
-                influxDbPublisher(selectedTarget: 'TestDB', customData: assignURL(BUILD_URL))
+                influxDbPublisher customPrefix: '', customProjectName: 'TestDB', jenkinsEnvParameterField: 'KEY=\'testdata\'', jenkinsEnvParameterTag: '', selectedTarget: 'TestDB'
             }
         }
 
-        steps {
-          script{
-            def assignURL(build_url) {
-    def buildURL = [:]
-    buildURL['url'] = build_url
-    return buildURL}
-          }
-        }          
+        
         
       //pi ends here below      
        }
