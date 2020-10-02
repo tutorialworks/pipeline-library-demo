@@ -1,4 +1,4 @@
-// vars/Build.groovy
+// vars/buildstage.groovy
 def call() {
  pipeline {
     
