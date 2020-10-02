@@ -14,20 +14,11 @@ def call() {
                 echo 'Building project...'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy project...'
-            }
-        }
+        
         }
         post {
             always {
-                influxDbPublisher customPrefix: '', customProjectName: 'TestDB', jenkinsEnvParameterField: 'KEY=\'testdata\'', jenkinsEnvParameterTag: '', selectedTarget: 'TestDB'
+                influxDbPublisher customPrefix: '', customProjectName: 'TestDB', jenkinsEnvParameterField: 'KEY=\'Build\'', jenkinsEnvParameterTag: '', selectedTarget: 'TestDB'
             }
         }
     }
