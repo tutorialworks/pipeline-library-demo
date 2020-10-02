@@ -18,7 +18,7 @@ def call() {
         }
         post {
             always {
-                influxDbPublisher customPrefix: '', customProjectName: 'TestDB', jenkinsEnvParameterField: 'KEY=\'Build\'', jenkinsEnvParameterTag: '', selectedTarget: 'TestDB'
+                influxDbPublisher customPrefix: '', customProjectName: 'TestDB', jenkinsEnvParameterField: 'KEY=\'Build\'', jenkinsEnvParameterTag: 'BUILD_URL', selectedTarget: 'TestDB'
             }
         }
     }
