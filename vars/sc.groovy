@@ -9,8 +9,8 @@ node('master') {
    stage('Checkout') {
    	echo "Checkout source code"
    	echo "${BUILD_URL}"
-   sh '''curl -i -XPOST http://3.134.86.192:8086/query --data-urlencode "q=CREATE DATABASE  jdb1"
-curl -i -XPOST \'http://3.134.86.192:8086/write?db=jdb1\' --data-binary \'jenkins_stages,stage=checkout 1534055562000000000\''''
+   sh '''curl -i -XPOST http://3.134.86.192:8086/query --data-urlencode "q=CREATE DATABASE  jdb2"
+curl -i -XPOST \'http://3.134.86.192:8086/write?db=jdb2\' --data-binary \'jenkins_stages,stage=checkout\''''
 }
 
 }
