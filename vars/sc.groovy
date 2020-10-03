@@ -10,7 +10,7 @@ node('master') {
    	echo "Checkout source code"
    	echo "${BUILD_URL}"
    sh '''curl -i -XPOST http://3.134.86.192:8086/query --data-urlencode "q=CREATE DATABASE  jdb2"
-curl -i -XPOST \'http://3.134.86.192:8086/write?db=jdb2\' --data-binary \'j_stag,stage=checkout value=checkout\''''
+curl -i -XPOST \'http://3.134.86.192:8086/write?db=jdb2\' --data-binary \'je_stag,stage=checkout value='checkout'\''''
 }
 
 }
