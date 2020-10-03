@@ -3,16 +3,18 @@ def call(){
 node('master') {
 	environment{
 		BUILD_ID=${BUILD_ID}
-		BUILD_URL${BUILD_URL}
+		BUILD_URL=${BUILD_URL}
+		Stage_name="UNIT TEST"
 			}
 	stage('Display'){
 		echo  "Build id is ${BUILD_ID}"
 		echo "Build Url is ${BUILD_URL}"
+		echo "Stage_name is ${Stage_name}"
 	}
    
    stage('UNIT TEST') {
    	echo "Unit testing the code"
-    influxDbPublisher customPrefix: '', customProjectName: '', jenkinsEnvParameterField: 'KEY=${BUILD_ID}', jenkinsEnvParameterTag: 'KEY=${BUILD_URL}', selectedTarget: 'TestDB'
+    influxDbPublisher customPrefix: '', customProjectName: '', jenkinsEnvParameterField: 'KEY=${BUILD_ID}', jenkinsEnvParameterTag: 'KEY=${BUILD_URL}',jenkinsEnvParameterTag: 'KEY=${Stage_name}' selectedTarget: 'js1'
 }
 
 }
