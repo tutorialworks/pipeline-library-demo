@@ -10,7 +10,7 @@ node('master') {
    	echo "Checkout source code"
    	echo "${BUILD_URL}"
    sh '''curl -i -XPOST http://3.134.86.192:8086/query --data-urlencode "q=CREATE DATABASE mydb"
-curl -i -XPOST \'http://3.134.86.192:8086/write?db=mydb\' --data-binary \'js,stage=checkout,Existence="Present" \''''
+curl -i -XPOST \'http://3.134.86.192:8086/write?db=mydb\' --data-binary \'js,stage=checkout,existence=present value=1\''''
 }
 
 }
