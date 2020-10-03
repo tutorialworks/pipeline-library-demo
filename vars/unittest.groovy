@@ -14,7 +14,7 @@ node('master') {
    
    stage('UNIT TEST') {
    	echo "Unit testing the code"
-    influxDbPublisher  jenkinsEnvParameterField: 'KEY=${BUILD_ID}', jenkinsEnvParameterTag: 'KEY=${BUILD_URL}',selectedTarget: 'js1'
+    influxDbPublisher  jenkinsEnvParameterField: 'KEY=${BUILD_ID}', jenkinsEnvParameterTag: 'KEY=${BUILD_URL}',selectedTarget: 'TestDB'
           }
 }
 }
