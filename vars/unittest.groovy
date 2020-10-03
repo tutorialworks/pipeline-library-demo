@@ -14,9 +14,9 @@ node('master') {
    
    stage('UNIT TEST') {
    	echo "Unit testing the code"
-   	def myFields = [:]
-     myFields['field_a'] = 'UNITTEST'
-     influxDbPublisher  jenkinsEnvParameterField: 'KEY=${BUILD_ID}', jenkinsEnvParameterTag: 'KEY=${BUILD_URL}',customData: myFields,selectedTarget: 'TestDB'
+   	def mFields = [:]
+     mFields['field_a'] = 'UNITTEST'
+     influxDbPublisher  jenkinsEnvParameterField: 'KEY=${BUILD_ID}', jenkinsEnvParameterTag: 'KEY=${BUILD_URL}',customData: mFields,selectedTarget: 'TestDB'
           }
 }
 }
