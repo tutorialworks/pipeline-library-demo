@@ -3,7 +3,7 @@
 def call(val, x=10){
 
   for(i in 1..5){
-    println i
+    println val
   }
   
 def arg = ["Groovy","Java","Python"]
