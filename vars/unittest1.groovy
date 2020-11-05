@@ -6,7 +6,7 @@ node('master') {
 		BUILD_URL=${BUILD_URL}
                 JOB_NAME=${JOB_NAME}
 		Stage_name="UNIT TEST"
-                def influxdb = Jenkins.instance.getDescriptorByType(jenkinsci.plugins.influxdb.DescriptorImpl)
+                //def influxdb = Jenkins.instance.getDescriptorByType(jenkinsci.plugins.influxdb.DescriptorImpl)
 
                 // version >= 2.0
                def influxdb = Jenkins.instance.getDescriptorByType(jenkinsci.plugins.influxdb.InfluxDbStep.DescriptorImpl)
