@@ -55,4 +55,4 @@ node('master') {
      influxDbPublisher(selectedTarget: 'my-new-target', customDataMap: myCustomMeasurementFields, customDataMapTags: myTags)
           }
 }
-}jj
+}
