@@ -1,5 +1,6 @@
 @Library('mylibrary')
 import com.cleverbuilder.GlobalVars
+
 @Library('mylibrary')
 import com.cleverbuilder.SampleClass
 
