@@ -1,5 +1,6 @@
 @Library('mylibrary')
 import com.cleverbuilder.GlobalVars
+import com.cleverbuilder.SampleClass
 
 pipeline {
     agent any
@@ -10,6 +11,10 @@ pipeline {
                 sayHello 'Dave'
 
                 echo 'The value of foo is : ' + GlobalVars.foo
+
+                person = new SampleClass()
+                person.increaseAge(10)
+                echo 'Incremented age, is now : ' + person.age
             }
         }
     }
