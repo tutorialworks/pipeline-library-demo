@@ -1,11 +1,4 @@
-library identifier: 'demolibrary@master',
-    //'master' refers to a valid git-ref
-    //'mylibraryname' can be any name you like
-    retriever: modernSCM([
-      $class: 'GitSCMSource',
-      remote: 'https://github.com/monodot/pipeline-library-demo.git'
-]) _
-
+@Library('mylibrary')
 import com.cleverbuilder.GlobalVars
 
 pipeline {
