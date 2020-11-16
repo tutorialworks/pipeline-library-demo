@@ -6,6 +6,8 @@ library identifier: 'demolibrary@master',
       remote: 'https://github.com/monodot/pipeline-library-demo.git'
 ])
 
+import com.cleverbuilder.GlobalVars
+
 pipeline {
     agent any
     stages {
@@ -13,6 +15,8 @@ pipeline {
             steps {
                 echo 'Hello, world'
                 sayHello 'Dave'
+
+                echo 'The value of foo is : ' + GlobalVars.foo
             }
         }
     }
