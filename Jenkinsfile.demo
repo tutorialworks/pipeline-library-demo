@@ -1,7 +1,6 @@
-@Library('mylibrary')
-import com.cleverbuilder.GlobalVars
+@Library('mylibrary') _
 
-@Library('mylibrary')
+import com.cleverbuilder.GlobalVars
 import com.cleverbuilder.SampleClass
 
 pipeline {
