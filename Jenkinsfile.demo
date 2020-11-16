@@ -4,9 +4,8 @@ library identifier: 'demolibrary@master',
     retriever: modernSCM([
       $class: 'GitSCMSource',
       remote: 'https://github.com/monodot/pipeline-library-demo.git'
-])
+]) _
 
-@Library('demolibrary@master')
 import com.cleverbuilder.GlobalVars
 
 pipeline {
