@@ -6,6 +6,7 @@ library identifier: 'demolibrary@master',
       remote: 'https://github.com/monodot/pipeline-library-demo.git'
 ])
 
+@Library('demolibrary')
 import com.cleverbuilder.GlobalVars
 
 pipeline {
